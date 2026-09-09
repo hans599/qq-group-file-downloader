@@ -1,0 +1,31 @@
+# ============================================================
+# 需要提交（你的源码）：
+#   monitor.py  config.py  config.example.toml  README.md
+#   requirements.txt  本文件(.gitignore)
+# 其余一律忽略，见下。
+# ============================================================
+
+# 实际配置（含 access_token / 真实群号等敏感信息，勿提交）
+config.toml
+
+# 运行产物
+monitor.log
+__pycache__/
+*.pyc
+
+# 虚拟环境
+venv/
+.venv/
+
+# ============================================================
+# NapCat 运行时（第三方，勿提交！）
+# 含 QQ 登录会话 guild1.db、token(passkey.json / napcat_*.json /
+# onebot11_*.json)、node_modules、日志、缓存等敏感/体积内容。
+# 本地保留即可，不要纳入版本控制；换机器时单独复制 NapCat.Shell。
+# ============================================================
+NapCat.Shell/
+
+# 额外兜底：任何数据库 / 会话文件都不提交
+*.db
+*.db-shm
+*.db-wal

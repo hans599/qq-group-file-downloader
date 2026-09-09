@@ -1,0 +1,17 @@
+# QQ 群文件监控配置（示例模板）
+# 用法：复制本文件为 config.toml 并填入你的真实值
+#   cp config.example.toml config.toml
+
+[onebot]
+# NapCatQQ 的 OneBot 11 WebSocket 地址（默认 3001，路径 /onebot/v11/ws）
+ws_url = "ws://127.0.0.1:3001/onebot/v11/ws"
+# NapCat 的 access_token（敏感信息，仅填在你的 config.toml，勿提交）
+access_token = ""
+# 要监控的群号列表（整数）。只监听这些群的文件上传。
+group_ids = [123456789]
+
+[log]
+# 日志文件路径（loguru 写入；含全部事件）
+file = "monitor.log"
+# 日志级别：DEBUG（文件含心跳等全部事件）/ INFO（仅关键事件）
+level = "DEBUG"
