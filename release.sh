@@ -12,6 +12,49 @@
 #   5. 提交；可选择性打标签、推送到 origin
 #
 # 注：本脚本只依赖 POSIX sh，可用 sh / dash / bash 运行。
+#
+# repository url: https://github.com/hans599/qq-group-file-downloader.git
+# ---------------------------------------------------------------
+# 【初次使用：克隆仓库】
+#   如果这是你第一次获取本项目，需要先 clone：
+#
+#     git clone <仓库地址>
+#     cd <项目目录>
+#     sh release.sh
+#
+#   例如：
+#     git clone https://github.com/username/repo.git
+#     cd repo
+#     sh release.sh
+#
+#   注意：
+#     - clone 后已自动关联 origin 远程，无需再 git init
+#     - 如果仓库是私有的，需先配置好 SSH key 或使用 token
+#
+# ---------------------------------------------------------------
+# 【日常更新：拉取远程改动】
+#   如果仓库已存在，且远程有其他人的更新，提交前建议先拉取：
+#
+#     git pull
+#     sh release.sh
+#
+#   或者在脚本运行前手动执行：
+#     git pull origin main     # main 换成你的分支名
+#
+#   推荐流程：
+#     1) git pull               # 先同步远程最新改动
+#     2) sh release.sh          # 再运行本脚本提交
+#
+#   注意：
+#     - 如果本地有未提交改动，git pull 可能冲突，建议先提交或 stash
+#     - 如果远程分支与本地不一致，可先 git fetch 查看状态
+#
+# ---------------------------------------------------------------
+# 【完整工作流示例】
+#   初次：  git clone <地址> && cd <目录> && sh release.sh
+#   更新：  git pull && sh release.sh
+#
+# ---------------------------------------------------------------
 
 # 切到脚本所在目录
 cd "$(dirname "$0")" || exit 1

@@ -9,7 +9,7 @@
 config.toml
 
 # 运行产物
-monitor.log
+*.log
 __pycache__/
 *.pyc
 
